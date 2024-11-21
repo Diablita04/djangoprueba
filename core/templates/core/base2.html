@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Universo Lector |{%block title%}{%endblock%}</title>
+    <link rel="website icon" type="png" href="{% static 'core/imagenes/bibliotecaLogo.png'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/core/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static '/core/css/otros.css' %}">
+    <link rel="stylesheet" href="{% static '/core/css/estiloLibros.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                  <img src="{% static 'core/imagenes/bibliotecaLogo.png'%}" alt="Logo" width="28" height="24" class="d-inline-block align-text-top"> El Universo Lector
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{% url 'home'%}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'acercade'%}">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'contacto'%}">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'listarLibros'%}">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'buscarQ'%}">Buscar Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'buscarM'%}">Modificar Libros</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'buscarL'%}">Prestamos</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+      </header> 
+    
+{%block content%}{%endblock%}
+<footer class="w-100 d-flex align-items-center justify-content-center flex-wrap">
+    <p class="fs-5 px-3 pt-3">ExpertD. &copy; El Universo Lector - Todos los derechos reservados.</p>
+    <div id="iconos">
+        <a href="https://www.facebook.com/penguinlibrosar?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+    </div>
+    <div id="iconos">
+        <a href="https://instagram.com/biblioteca_nacional_argentina?igshid=YTQwZjQ0NmI0OA=="><i class="bi bi-instagram"></i></a>
+    </div>
+    <div id="iconos">
+        <a href="https://open.spotify.com/show/5Mwn8rBfEfwYfJ0mrdIaPp?si=RlOtY_u3TfGCAGGnYRblhQ"><i class="bi bi-spotify"></i></a>
+    </div>
+    <div id="iconos">
+        <a href="https://www.tiktok.com/@penguinlibrosmx?_t=8hiI9ZHxNVG&_r=1"><i class="bi bi-tiktok"></i></a>
+    </div>
+    <div id="iconos">
+        <a href="https://x.com/BNMMArgentina?t=wUiPPMK5CSnqVwfVLFM90Q&s=09"><i class="bi bi-twitter-x"></i></a>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

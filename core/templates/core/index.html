@@ -1,0 +1,62 @@
+{%extends 'core/base.html'%}
+{% block title %} Inicio {% endblock %}
+{% load static %}
+{% block content %} 
+<div class="all-content">
+  <section class="bienvenidos my-5">
+  <h5 class="text-center my-5">¿Por qué leer libros es importante?</h5>
+  <div class="container">
+      <div class="row">
+          <div class="col-6">
+              <p>Mejora el lenguaje, fortalece la concentración, alimenta la imaginación, desarrolla la memoria, facilita la comunicación, 
+                ejercita el cerebro, mejora la ortografía,  amplía el vocabulario.
+              </p>
+              <p>Sin la lectura no se tendría información y costaría desenvolverse, 
+                por eso es esencial para todas las personas y es algo que debe alimentarse todos los días. 
+              </p>
+          </div>
+          <div class="col-6">
+              <img class="img-fluid" src="{% static '/core/imagenes/leer2.jpeg'%}" alt="">
+          </div>
+      </div>
+  </div>
+</section>
+<section class="bienvenidos my-5">
+  <h5 class="text-center my-5">Nuestro Servicio</h5>
+  <div class="container">
+      <div class="row">
+          <div class="col-4">
+              <div class="card text-center">
+                  <img src="{% static '/core/imagenes/libros.jpeg'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Libros</h5>
+                    <p class="card-text">Aquí podras encontrar muchos libros fisicos de muchos generos literarios.</p>
+                    <a href="/libro_list" class="btn btn-primary">Ver mas</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-4">
+              <div class="card text-center">
+                  <img src="{% static '/core/imagenes/audiolibro1.jpeg'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">AudioLibros</h5>
+                    <p class="card-text">Aquí podras encontrar muchos audiolibros para escuchar tus libros favoritos.</p>
+                    <a href="/libro_list" class="btn btn-primary">Ver mas</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-4">
+              <div class="card text-center">
+                  <img src="{% static '/core/imagenes/librodigital.jpeg'%}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">E-Libros</h5>
+                    <p class="card-text">Aquí podras encontrar muchos libros digitales para leer desde cualquier dispositivo.</p>
+                    <a href="/libro_list" class="btn btn-primary">Ver mas</a>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+{% endblock %}

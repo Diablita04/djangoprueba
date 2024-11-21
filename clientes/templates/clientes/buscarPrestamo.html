@@ -1,0 +1,63 @@
+{%extends 'core/base2.html'%}
+{% block title %} Buscar Prestamos {% endblock %}
+{% load static %}
+{% block content %}
+{% include 'clientes/includes/mensajes_alerta.html' %}
+<div class="all-content ps-4">
+    <section id="contenidos">
+        <div class="container">
+            <div class="heading">Prestamos</div>
+        </div>
+        <br>
+    <div class="row pb-4">
+        <div class="col-md-6">
+            <form action="" method="post">{% csrf_token %}
+                <input type="text" id="buscar" name="buscarPrestamo" placeholder="Buscar Nombre, DNI o Libro Prestado...">
+                <input type="submit" class="btn btn-primary btn-block" value="Buscar"/>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-warning">
+	            <p><a class="nav-link text-uppercase fw-bold" href="{% url 'createCliente' %}"> Agregar Cliente</a></p>
+            </button> 
+        </div>
+    </div>
+    <div class="row">
+            <table class="table table-success table-striped table-hover">
+                <tr>
+                    <th>Apellido y Nombre</th>
+                    <th>DNI</th>
+                    <th>Direccion</th>
+                    <th>Correo</th>
+                    <th>Nombre del Libro</th>
+                    <th>Categoria</th>
+                    <th>Celular</th>
+                    <th>Fecha Prestamo</th>
+                    <th>Cantidad de Dìas</th>
+                    <th>Modificar</th>
+                </tr>
+                {% for clientes in buscarPrestamo %}
+                <tr>
+                    <td><p>{{clientes.nombre}}</p></td>
+                    <td><p>{{clientes.dni}}</p></td>
+                    <td><p>{{clientes.direccion}}</p></td>
+                    <td><p>{{clientes.correo}}</p></td>
+                    <td><p>{{clientes.nombrelibro}}</p></td>
+                    <td><p>{{clientes.categoria}}</p></td>
+                    <td><p>{{clientes.celular}}</p></td>
+                    <td><p>{{clientes.fechaPrestamo}}</p></td>
+                    <td><p>{{clientes.cantidadDias}}</p></td>
+                    <td>
+                        <p>
+                            <a href="{% url 'updateCliente' clientes.id %}">Editar</a>
+                            <a href="{% url 'deleteCliente' clientes.id %}" class="link-danger">Borrar</a>
+                        </p>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    </section>
+</div>
+{% endblock %}

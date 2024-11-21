@@ -1,0 +1,22 @@
+{%extends 'core/base.html'%}
+{% block title %} Eliminar Cliente {% endblock %}
+{% load static %}
+{% block content %} 
+<br>
+<br>
+<main role="main">
+    <div class="container">
+        <div class="row nt-3 md-5">
+            <div class="col-md-9 mx-auto">
+                <form action="" method="post">{% csrf_token %}
+                    <p>¿Estás seguro de que quieres borrar <b>"{{ object }}"</b>?</p>
+                    <input type="submit" class="btn btn-danger btn-block" value="Confirmar"/>
+                    <a class="nav-link" href="{% url 'buscarL' %}">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<br>
+<br>
+{% endblock %}

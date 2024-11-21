@@ -1,0 +1,61 @@
+{%extends 'core/base2.html'%}
+{% block title %} Libros {% endblock %}
+{% load static %}
+{% block content %} 
+
+<div class="all-content ps-4">
+    <div>
+        <div class="row pt-3 pb-3">
+            <button type="button" class="btn btn-warning">
+                <p><a class="nav-link text-uppercase fw-bold" href="{% url 'create' %}"> Agregar Libro</a></p>
+            </button>
+        </div>
+        <div class="row">
+            <form action="" method="post">{% csrf_token %}
+                <input type="text" id="buscar" name="buscar" placeholder="Buscar Titulo o Autor...">
+                <input type="submit" class="btn btn-primary btn-block" value="Buscar"/>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <h3>Listado de Libros</h3>
+            <table class="table table-success table-striped table-hover">
+                <tr>
+                    <th>Portada</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>ISBN</th>
+                    <th>Categoria</th>
+                    <th>Estado</th>
+                    <th>Modificar</th>
+                </tr>
+                {% for libros in buscar %}
+                <tr>
+                    <td><img class="img-fluid" src="{{libros.imagen.url}}" alt="" width="100px" height="100px"></td>
+                    <td><p>{{libros.titulo}}</p>
+                    {% if libros.estado == 'Disponible' %}
+                        <a href="/clientes_form" class="btn btn-primary">Reservar</a>
+                    {% endif %}
+                    </td>
+                    <td><p>{{libros.autor}}</p></td>
+                    <td><p>{{libros.isbn}}</p></td>
+                    <td><p>{{libros.categoria}}</p></td>
+                    <td><p>{{libros.estado}}</p></td>
+                    <td>
+                        <p>
+                        <a href="{% url 'update' libros.id %}">Editar</a>
+                        <a href="{% url 'delete' libros.id %}" class="link-danger">Borrar</a>
+                        </p>
+                    </td>
+                    
+                    
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

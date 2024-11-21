@@ -1,0 +1,20 @@
+header{
+    background-color: black;
+}
+.bienvenidos{
+    text-align: justify;
+    line-height: 2em;
+}
+footer{
+    background-color: black;
+    min-height: 100px;
+}
+footer p{
+    color: white;
+    text-align: center;
+}
+#iconos i{
+    font-size: 26px;
+    padding: 0 8px;
+    color: white;
+}

@@ -1,0 +1,97 @@
+{%extends 'core/base.html'%}
+{% block title %} Acerca de {% endblock %}
+{% load static %}
+{% block content %} 
+<div class="all-content">
+    <section id="acerca">
+        <div class="container">
+            <div class="heading">Acerca de <span>Tecno Power</span></div>
+            <center>
+            <div class="row">
+              <div class="col-md-12">
+                <h3>¿Cuáles son nuestros objetivos?</h3>
+                <p>Nuestro objetivo es brindarte una experiencia excepcional, facilitando el acceso a información valiosa y promoviendo el aprendizaje continuo.</p>
+                <p>Explora, busca y descubre tus próximas lecturas con nuestras herramientas de navegación intuitivas, comparte tus opiniones y descubre nuevas perspectivas.</p>
+                <p>Únete a nuestra comunidad de lectores apasionados y déjate inspirar por la magia de los libros.</p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <iframe width="510" height="265" src="https://www.youtube.com/embed/i7FRvJKMnKQ?si=V0Mt4cB2lN5OoIYO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>  
+            </center>
+        </div>
+    </section>
+    <section id="top-cards">
+      <div class="heading2">¿Quiénes somos?</div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="{%static 'core/imagenes/agustina.jpg'%}" alt="Agustina" height="450px">
+            </div>
+            <div><center><h4>Agustina Constanza Llanes</h4>
+            <p>Estudiante de Ingeniería Informática</p></center>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="{%static 'core/imagenes/ornella.jpg'%}" alt="Ornella" height="450px">
+            </div>
+            <div><center><h4>Ornella Daiana Salinas</h4>
+              <p>Estudiante de Ingeniería Informática</p></center>
+              </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="{%static 'core/imagenes/cecilia.jpg'%}" alt="Cecilia" height="450px">
+            </div>
+            <div><center><h4>Cecilia Elizabeth Tacacho</h4>
+              <p>Estudiante de Ingeniería Informática</p></center>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="galeria">
+      <div class="heading4">Nuestra Galería</div>
+      <div class="row" style="margin-top:30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{%static 'core/imagenes/biblioteca1.jpg'%}" alt="img1">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{%static 'core/imagenes/biblioteca2.jpg'%}" alt="img1">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{%static 'core/imagenes/biblioteca3.jpg'%}" alt="img1">
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:30px;">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{%static 'core/imagenes/biblioteca4.jpg'%}" alt="img1">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{%static 'core/imagenes/biblioteca5.jpg'%}" alt="img1">
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{%static 'core/imagenes/biblioteca6.jpg'%}" alt="img1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}

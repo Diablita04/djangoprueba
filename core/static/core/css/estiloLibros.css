@@ -1,0 +1,58 @@
+
+.card-img-top{
+    border-radius: 20px;
+    padding: 10px;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.card-body{
+    padding: 25px;
+    margin-top: -15px;
+    text-align: center;
+    
+}
+.card:hover{
+    transform: scale(0.9);
+}
+#btn2 button{
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn2 button:hover{
+    background-color: rgb(228, 228, 81);
+}
+
+
+@media screen and (max-width:567px) {
+    .estilo-x h5{
+        color: rgb(221, 183, 11);
+        font-size: 4rem;
+        font-size: calc(1.525rem + 1vw);
+    }
+    .estilo-x p{ 
+        font-size: calc(1.525rem + 1vw);
+}
+}
+@media screen and (min-width:567px) {
+    .estilo-x h5{
+        color: rgb(221, 183, 11);
+        font-size: 4rem;
+        font-size: calc(0.5rem + 1vw);
+    }
+    .estilo-x p{ 
+        font-size: calc(0.25rem + 1vw);
+}
+}
+
+
+
+
+
+

@@ -1,0 +1,247 @@
+{%extends 'core/base.html'%}
+{% block title %} Libros {% endblock %}
+{% load static %}
+{% block content %} 
+{% include 'libros/includes/mensajes_alerta.html' %}
+<br>
+
+<!-- <button type="button" class="btn btn-warning">
+	<p><a class="nav-link text-uppercase fw-bold" href="{% url 'create' %}"> Agregar Libro</a></p>
+</button> -->
+<div class="container py-3">
+<!-- SECCIÓN NOVEDADES -->
+	<h1 class="text-center">Novedades</h1>
+	<div class="card-group">
+		{% for libros in libro_list%}
+			{%if libros.categoria == "novedades1" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+						</div>
+					</div>
+		  		</div>
+			{%endif%}
+		{% endfor %}
+	</div>
+	<div class="card-group">
+		{% for libros in libro_list%}
+			{%if libros.categoria == "novedades2" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{%endif%}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- CATEGORIAS -->
+	<div class="container" id="galeria">
+		<div class="heading4">Categorías Destacadas</div>
+		<div class="row" style="margin-top:20px;">
+	  		<div class="col-md-4 py-3 py-md-0">
+				<div class="card">
+		  			<img src="{%static 'core/imagenes/libros-infantiles.jpg'%}" alt="img1">
+				</div>
+	  		</div>
+			<div class="col-md-4 py-3 py-md-0">
+				<div class="card">
+		  			<img src="{%static 'core/imagenes/comics.jpg'%}" alt="img1">
+				</div>
+		  	</div>
+			<div class="col-md-4 py-3 py-md-0">
+				<div class="card">
+		 			<img src="{%static 'core/imagenes/ciencia-ficcion.png'%}" alt="img1">
+				</div>
+	  		</div>
+		</div>
+	</div>
+	<br>
+<!-- SECCIÓN NOVELAS ROMÁNTICAS -->
+	<div class="heading4">Novelas Románticas</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Romance" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}	
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- SECCIÓN NOVELAS LITERARIAS -->
+	<div class="heading4">Novelas Literarias</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Literatura" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- SECCIÓN NOVELAS HISTÓRICAS -->
+	<div class="heading4">Novelas Históricas</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Historia" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{%endif%}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div> 
+	<br>
+<!-- SECCIÓN FANTASIA -->
+	<div class="heading4">Fantasía</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Fantasia" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- SECCIÓN COMICS Y MANGAS -->
+	<div class="heading4">Comics y Mangas</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Comic" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- SECCIÓN INFANTIL -->
+	<div class="heading4">Infantil</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Infantil" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- SECCIÓN JUVENIL -->
+	<div class="heading4">Juvenil</div>
+	<br>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{%if libros.categoria == "Juvenil" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+	<br>
+<!-- SECCIÓN EBOOKS -->
+	<div class="heading4">Novedades en eBooks</div>
+	<h5 class="text-center">Estas son nuestras novedades en formato eBook ¿Qué esperás para leerlas?</h5>
+	<div class="card-group">
+		{% for libros in libro_list %}
+			{% if libros.categoria == "Ebook" %}
+		  		<div class="card">
+					<img src="{{libros.imagen.url}}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<div class="estilo-x">
+							<h5 class="card-title">{{libros.titulo}}</h5>
+							<p class="card-text fst-italic">{{libros.autor}}</p>
+							
+						</div>
+					</div>
+		  		</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<br>
+	<div id="btn2" class="text-center"><button>Ver más</button></div>
+</div>
+
+{% endblock %}  
